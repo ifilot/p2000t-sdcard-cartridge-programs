@@ -156,14 +156,14 @@ jobs:
         name: HELLOWORLD.PRG
         path: ./
     - name: Update the nightly release
-        uses: softprops/action-gh-release@v1
-        with:
-          files: |
-            CASDUMP.PRG
-            MONCRC16.PRG
-            HELLOWORLD.PRG
-          tag_name: latest
-          release_name: Latest Build
-          overwrite: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          CASDUMP.PRG
+          MONCRC16.PRG
+          HELLOWORLD.PRG
+        tag_name: latest
+        release_name: Latest Build
+        overwrite: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
